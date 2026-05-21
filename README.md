@@ -33,7 +33,7 @@ SOC ekipleri için Snort/Suricata kuralı yazmak zaman alıcı ve uzmanlık gere
 | **Base LLM** | `mlx-community/Meta-Llama-3-8B-Instruct-4bit` | 4-bit quantize edilmiş, Apple Silicon'da çalışacak boyutta temel model |
 | **Inference / Training Framework** | **MLX** (Apple ML Research) | Unified memory mimarisi sayesinde GPU/CPU ayrımı olmadan native çalışma |
 | **Fine-Tuning Yöntemi** | **LoRA** (Low-Rank Adaptation) | Tam fine-tune yerine sadece düşük rank'li adaptör matrislerini eğiterek hız ve disk tasarrufu |
-| **Donanım** | MacBook Pro · Apple M Serisi | Tüm pipeline, internet bağlantısı olmadan tek bir Mac üzerinde |
+| **Donanım** | MacBook M5 Pro · Apple M Serisi | Tüm pipeline, internet bağlantısı olmadan tek bir Mac üzerinde |
 | **Veri Kaynağı** | [Emerging Threats Open Ruleset](https://rules.emergingthreats.net/) | Sektör standardı, topluluk-doğrulamalı IDS kuralları |
 | **Veri Formatı** | JSONL (chat-template uyumlu) | `train.jsonl` / `valid.jsonl` Llama-3 instruct şablonuna uygun |
 
@@ -145,7 +145,7 @@ alert tcp $EXTERNAL_NET any -> $HOME_NET any (
 
 ### Ön Gereksinimler
 
-- **macOS 13+** (Apple Silicon — M1 / M2 / M3 / M4)
+- **macOS 13+** (Apple Silicon — M1 / M2 / M3 / M4 / M5)
 - **Python 3.10+**
 - Yaklaşık **8 GB** boş disk (base model + adaptörler için)
 
